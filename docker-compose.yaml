@@ -21,10 +21,4 @@ services:
       - ~/.cache/deno:/deno_dir
 
     # Command to run in the container
-    command:
-      [
-        "run",
-        "--allow-net",
-        "--allow-read",
-        "/app/src/app.ts"
-      ]
+    command: [ "denon", "start" ]
