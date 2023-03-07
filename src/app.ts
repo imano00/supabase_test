@@ -8,7 +8,7 @@ const router = new Router();
 router.get("/", (ctx) => {
   console.log("akjshak");
 
-  ctx.response.body = "Hello World! adik2 haha";
+  ctx.response.body = "Hello World!";
 });
 
 app.use(router.routes());
