@@ -8,4 +8,4 @@ app.use(userRouter.allowedMethods());
 
 console.log("Server is listening on port 8000");
 
-await app.listen({ port: 8000 });
+await app.listen({ port: 80 });
