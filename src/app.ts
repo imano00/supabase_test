@@ -6,6 +6,6 @@ const app = new Application();
 app.use(userRouter.routes());
 app.use(userRouter.allowedMethods());
 
-console.log("Server is listening on port 8000");
+console.log("Server is listening on port 80");
 
 await app.listen({ port: 80 });
