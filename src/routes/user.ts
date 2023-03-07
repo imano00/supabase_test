@@ -6,7 +6,7 @@ router.get("/", (ctx) => {
   ctx.response.body = "Hello World!";
 });
 
-router.get("/user/:id", (ctx) => {
+router.get("/:id", (ctx) => {
   const { id } = ctx.params;
   ctx.response.body = `User with ID ${id}`;
 });
@@ -14,5 +14,6 @@ router.get("/user/:id", (ctx) => {
 const userRouter = new Router();
 
 userRouter.prefix("user");
+userRouter.use(router.routes());
 
 export default userRouter;
