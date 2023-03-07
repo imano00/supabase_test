@@ -4,7 +4,10 @@ services:
   # Deno service
   deno:
     # Docker image to use for the service
-    image: denoland/deno
+    image: test_supabase
+    build:
+      context: .
+      dockerfile: Dockerfile
 
     # Name to assign to the container (optional)
     container_name: deno_dev
