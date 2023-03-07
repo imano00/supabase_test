@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  # Deno service
+  deno:
+    # Docker image to use for the service
+    image: denoland/deno
+
+    # Name to assign to the container (optional)
+    container_name: deno_dev
+
+    # Port mapping to allow accessing the service from the host
+    ports:
+      - "3000:3000"
+
+    # Volume mapping to mount a local directory to the container's workspace
+    volumes:
+      # Map the ./src directory on the host to the /app/src directory in the container
+      - ./src:/app/src
+      # Map the ~/.cache/deno directory on the host to the /deno_dir directory in the container
+      - ~/.cache/deno:/deno_dir
+
+    # Command to run in the container
+    command:
+      [
+        "run",
+        "--allow-net",
+        "--allow-read",
+        "/app/src/app.ts"
+      ]
