@@ -52,7 +52,7 @@ export class SupabaseService {
     return data?.[0];
   }
 
-  async deleteUser(id: number): Promise<void> {
+  async deleteUser(id: string): Promise<void> {
     // Delete a user with the given ID from the 'users' table
     const { error } = await this.supabase
       .from<User>("users")
