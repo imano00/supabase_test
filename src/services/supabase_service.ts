@@ -12,8 +12,8 @@ export class SupabaseService {
 
   constructor() {
     // Initialize a new instance of the Supabase client using the project URL and public API key
-    const supabaseUrl = "https://your-project-url.supabase.co";
-    const supabaseKey = "your-public-api-key";
+    const supabaseUrl = "https://awjifjiyiqxmkqorrigw.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3amlmaml5aXF4bWtxb3JyaWd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzgyNDc0MTMsImV4cCI6MTk5MzgyMzQxM30.5NluGpqqk0A3Fe757MZiXXoxS4Y3nsvKXHZ3upwF60E";
     this.supabase = createClient(supabaseUrl, supabaseKey);
   }
 
